@@ -6,6 +6,10 @@
 
 [![asciicast](https://asciinema.org/a/cmF1PM5alhuCEdkgGFJvftVr6.svg)](https://asciinema.org/a/cmF1PM5alhuCEdkgGFJvftVr6)
 
+### brain-gcd asciinema
+
+[![asciicast](https://asciinema.org/a/5uLuKCGjC8kQtHyYhOTrPYkzC.svg)](https://asciinema.org/a/5uLuKCGjC8kQtHyYhOTrPYkzC)
+
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/erusanov/fullstack-javascript-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/erusanov/fullstack-javascript-project-44/actions)
 

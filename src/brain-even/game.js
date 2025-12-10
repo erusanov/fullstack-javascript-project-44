@@ -1,7 +1,5 @@
 import {Game as BaseGame} from '../base/game.js';
-
-const YES = 'yes';
-const NO = 'no';
+import {NO, YES} from '../const.js';
 
 class Game extends BaseGame {
     currentQuestion = 0;

@@ -1,3 +1,7 @@
+### brain-even asciinema
+
+[![asciicast](https://asciinema.org/a/tZW7GY9DPLGG29LQEmapqEhvu.svg)](https://asciinema.org/a/tZW7GY9DPLGG29LQEmapqEhvu)
+
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/erusanov/fullstack-javascript-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/erusanov/fullstack-javascript-project-44/actions)
 

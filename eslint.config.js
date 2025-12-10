@@ -34,6 +34,7 @@ export default defineConfig([
             '@stylistic/comma-dangle': ['error', 'never'],
             '@stylistic/semi': ['error', 'always'],
             '@stylistic/object-curly-spacing': ['error', 'never'],
+            '@stylistic/operator-linebreak': ['error', 'after'],
             'no-unused-vars': 'error'
         }
     }

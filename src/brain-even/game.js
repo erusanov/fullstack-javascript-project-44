@@ -1,25 +1,25 @@
-import {Game as BaseGame} from '../base/game.js';
-import {NO, YES} from '../const.js';
+import { Game as BaseGame } from '../base/game.js'
+import { NO, YES } from '../const.js'
 
 class Game extends BaseGame {
-    currentQuestion = 0;
-    currentAnswer = YES;
+  currentQuestion = 0
+  currentAnswer = YES
 
-    renderRules = () => {
-        console.log(`Answer "yes" if the number is even, otherwise answer "no"`);
-    };
+  renderRules = () => {
+    console.log(`Answer "yes" if the number is even, otherwise answer "no"`)
+  }
 
-    getQuestion = () => {
-        return Math.floor(Math.random() * 100);
-    };
+  getQuestion = () => {
+    return Math.floor(Math.random() * 100)
+  }
 
-    get rightAnswer() {
-        const isEven = this.currentQuestion % 2 === 0;
+  get rightAnswer() {
+    const isEven = this.currentQuestion % 2 === 0
 
-        return isEven ? YES : NO;
-    }
+    return isEven ? YES : NO
+  }
 }
 
 export {
-    Game
-};
+  Game,
+}

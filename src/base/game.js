@@ -1,85 +1,85 @@
-import readlineSync from 'readline-sync';
+import readlineSync from 'readline-sync'
 
-const ANSWERS_TO_WIN = 3;
+const ANSWERS_TO_WIN = 3
 
 class Game {
-    currentAnswer = '';
-    currentQuestion = '';
+  currentAnswer = ''
+  currentQuestion = ''
 
-    get rightAnswer() {
-        return '';
+  get rightAnswer() {
+    return ''
+  }
+
+  run = () => {
+    this.#greetings()
+    this.renderRules()
+
+    while (!this.#isStop) {
+      this.ask()
+      this.#afterAsk()
     }
 
-    run = () => {
-        this.#greetings();
-        this.renderRules();
+    this.#afterGame()
+  }
 
-        while (!this.#isStop) {
-            this.ask();
-            this.#afterAsk();
-        }
+  renderRules = () => {
+    console.warn('Rules must be implemented!')
+  }
 
-        this.#afterGame();
-    };
+  getQuestion = () => {
+    return ''
+  }
 
-    renderRules = () => {
-        console.warn('Rules must be implemented!');
-    };
+  #player = ''
+  #answersCount = 0
 
-    getQuestion = () => {
-        return '';
-    };
+  get #isLoose() {
+    return this.rightAnswer !== this.currentAnswer
+  }
 
-    #player = '';
-    #answersCount = 0;
+  get #isWin() {
+    return this.#answersCount >= ANSWERS_TO_WIN
+  }
 
-    get #isLoose() {
-        return this.rightAnswer !== this.currentAnswer;
-    }
+  get #isStop() {
+    return this.#isLoose || this.#isWin
+  }
 
-    get #isWin() {
-        return this.#answersCount >= ANSWERS_TO_WIN;
-    }
+  #greetings = () => {
+    console.log('Welcome to the Brain Games!')
 
-    get #isStop() {
-        return this.#isLoose || this.#isWin;
-    }
+    this.#player = readlineSync.question('May I have your name? ')
 
-    #greetings = () => {
-        console.log('Welcome to the Brain Games!');
+    console.log(`Hello, ${this.#player}!`)
+  }
 
-        this.#player = readlineSync.question('May I have your name? ');
+  ask = () => {
+    this.currentQuestion = this.getQuestion()
 
-        console.log(`Hello, ${this.#player}!`);
-    };
+    console.log(`Question: ${this.currentQuestion}`)
 
-    ask = () => {
-        this.currentQuestion = this.getQuestion();
+    this.currentAnswer = readlineSync.question('Your answer: ')
+  }
 
-        console.log(`Question: ${this.currentQuestion}`);
+  #afterAsk = () => {
+    this.#answersCount++
 
-        this.currentAnswer = readlineSync.question('Your answer: ');
-    };
+    const message = !this.#isLoose
+      ? 'Correct!'
+      : `'${this.currentAnswer}' is wrong answer ;(. Correct answer was '${this.rightAnswer}'`
 
-    #afterAsk = () => {
-        this.#answersCount++;
+    console.log(message)
+  }
 
-        const message = !this.#isLoose ?
-            'Correct!' :
-            `'${this.currentAnswer}' is wrong answer ;(. Correct answer was '${this.rightAnswer}'`;
+  #afterGame = () => {
+    const message = !this.#isLoose
+      ? `Congratulations, ${this.#player}!`
+      : `Let's try again, ${this.#player}!`
 
-        console.log(message);
-    };
-
-    #afterGame = () => {
-        const message = !this.#isLoose ?
-            `Congratulations, ${this.#player}!` :
-            `Let's try again, ${this.#player}!`;
-
-        console.log(message);
-    };
+    console.log(message)
+  }
 }
 
 export {
-    Game
-};
+  Game,
+}

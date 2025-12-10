@@ -1,7 +1,7 @@
-const YES = 'yes';
-const NO = 'no';
+const YES = 'yes'
+const NO = 'no'
 
 export {
-    YES,
-    NO
-};
+  YES,
+  NO,
+}

@@ -10,6 +10,10 @@
 
 [![asciicast](https://asciinema.org/a/5uLuKCGjC8kQtHyYhOTrPYkzC.svg)](https://asciinema.org/a/5uLuKCGjC8kQtHyYhOTrPYkzC)
 
+# brain-progression asciinema
+
+[![asciicast](https://asciinema.org/a/OfyOlZow4u1VQauPCFFcEOZMI.svg)](https://asciinema.org/a/OfyOlZow4u1VQauPCFFcEOZMI)
+
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/erusanov/fullstack-javascript-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/erusanov/fullstack-javascript-project-44/actions)
 

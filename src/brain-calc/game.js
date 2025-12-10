@@ -38,7 +38,7 @@ const getRandomQuestionParts = () => {
         operator,
         b
     };
-}
+};
 
 class Game extends BaseGame {
     currentQuestion = '';

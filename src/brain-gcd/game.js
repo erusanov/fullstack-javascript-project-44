@@ -1,11 +1,11 @@
 import {Game as BaseGame} from '../base/game.js';
 
 const gcd = (a, b) => {
-  if (!b) {
-    return a;
-  }
+    if (!b) {
+        return a;
+    }
 
-  return gcd(b, a % b);
+    return gcd(b, a % b);
 };
 
 const buildQuestion = ({a, b}) => {
@@ -35,7 +35,7 @@ const getRandomQuestionParts = () => {
         a,
         b
     };
-}
+};
 
 class Game extends BaseGame {
     currentQuestion = '';

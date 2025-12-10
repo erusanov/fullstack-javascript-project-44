@@ -12,7 +12,7 @@ class Game extends BaseGame {
     };
 
     getQuestion = () => {
-        return Math.floor(Math.random() * 100)
+        return Math.floor(Math.random() * 100);
     };
 
     get rightAnswer() {
